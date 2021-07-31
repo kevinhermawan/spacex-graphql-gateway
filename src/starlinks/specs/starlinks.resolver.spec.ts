@@ -1,7 +1,6 @@
 import { HttpModule } from '@nestjs/axios';
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { HttpConfigService } from '../../_utils/http-config.service';
 import { StarlinksResolver } from '../starlinks.resolver';
 import { StarlinksService } from '../starlinks.service';
 
@@ -10,11 +9,7 @@ describe('StarlinksResolver', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [
-        HttpModule.registerAsync({
-          useClass: HttpConfigService,
-        }),
-      ],
+      imports: [HttpModule],
       providers: [StarlinksResolver, StarlinksService],
     }).compile();
 

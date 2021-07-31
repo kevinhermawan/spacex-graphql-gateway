@@ -1,8 +1,10 @@
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 
+import { validateEnvVars } from './_utils/env.validation';
 import { CapsulesModule } from './capsules/capsules.module';
 import { CompanyModule } from './company/company.module';
 import { CoresModule } from './cores/cores.module';
@@ -19,10 +21,13 @@ import { StarlinksModule } from './starlinks/starlinks.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      cache: true,
+      validate: validateEnvVars,
+    }),
     GraphQLModule.forRoot({
       debug: false,
       autoSchemaFile: true,
-      plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
     }),
     CapsulesModule,
     CompanyModule,
