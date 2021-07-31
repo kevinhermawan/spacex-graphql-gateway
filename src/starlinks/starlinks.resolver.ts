@@ -1,4 +1,4 @@
-import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { Args, Query, Resolver } from '@nestjs/graphql';
 
 import { Starlink } from './entities/starlink.entity';
 import { StarlinksService } from './starlinks.service';
@@ -7,7 +7,6 @@ import { StarlinksService } from './starlinks.service';
 export class StarlinksResolver {
   constructor(private readonly starlinksService: StarlinksService) {}
 
-  @Mutation(() => Starlink)
   @Query(() => [Starlink], { name: 'starlinks' })
   findAll() {
     return this.starlinksService.findAll();

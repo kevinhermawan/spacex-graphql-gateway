@@ -14,11 +14,11 @@ export class Company {
   @Field(() => String, { nullable: true })
   summary?: string;
 
-  @Field(() => Int, { nullable: true })
-  valuation?: number;
+  @Field(() => String, { nullable: true })
+  valuation?: string;
 
   @Field(() => String, { nullable: true })
-  cto_propulsion?: string;
+  ctoPropulsion?: string;
 
   @Field(() => String, { nullable: true })
   cto?: string;
@@ -30,10 +30,10 @@ export class Company {
   coo?: string;
 
   @Field(() => Int, { nullable: true })
-  test_sites?: number;
+  testSites?: number;
 
   @Field(() => Int, { nullable: true })
-  launch_sites?: number;
+  launchSites?: number;
 
   @Field(() => Int, { nullable: true })
   vehicles?: number;

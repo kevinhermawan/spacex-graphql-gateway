@@ -1,4 +1,4 @@
-import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Field, Float, Int, ObjectType } from '@nestjs/graphql';
 
 import { LaunchCore } from './launch-core.entity';
 import { LaunchFailure } from './launch-failure.entity';
@@ -17,7 +17,7 @@ export class Launch {
   details?: string;
 
   @Field(() => Int, { nullable: true })
-  flight_number?: number;
+  flightNumber?: number;
 
   @Field(() => Boolean, { nullable: true })
   upcoming?: boolean;
@@ -32,7 +32,7 @@ export class Launch {
   net?: boolean;
 
   @Field(() => Boolean, { nullable: true })
-  auto_update?: boolean;
+  autoUpdate?: boolean;
 
   @Field(() => [String], { nullable: true })
   ships?: string[];
@@ -53,22 +53,22 @@ export class Launch {
   failures?: LaunchFailure[];
 
   @Field(() => String, { nullable: true })
-  static_fire_date_utc?: string;
+  staticFireDateUtc?: string;
 
-  @Field(() => Int, { nullable: true })
-  static_fire_date_unix?: number;
-
-  @Field(() => String, { nullable: true })
-  date_utc?: string;
-
-  @Field(() => Int, { nullable: true })
-  date_unix?: number;
+  @Field(() => Float, { nullable: true })
+  staticFireDateUnix?: number;
 
   @Field(() => String, { nullable: true })
-  date_local?: string;
+  dateUtc?: string;
+
+  @Field(() => Float, { nullable: true })
+  dateUnix?: number;
 
   @Field(() => String, { nullable: true })
-  date_precision?: string;
+  dateLocal?: string;
+
+  @Field(() => String, { nullable: true })
+  datePrecision?: string;
 
   @Field(() => LaunchLinks, { nullable: true })
   links?: LaunchLinks;
@@ -86,5 +86,5 @@ export class Launch {
   launchpad?: string;
 
   @Field(() => String, { nullable: true })
-  launch_library_id?: string;
+  launchLibraryId?: string;
 }

@@ -9,7 +9,7 @@ export class LaunchFairings {
   recovered?: boolean;
 
   @Field(() => Boolean, { nullable: true })
-  recovery_attempt?: boolean;
+  recoveryAttempt?: boolean;
 
   @Field(() => [String], { nullable: true })
   ships?: string[];

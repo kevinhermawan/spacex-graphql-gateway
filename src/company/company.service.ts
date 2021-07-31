@@ -1,3 +1,4 @@
+import * as camelcaseKeys from 'camelcase-keys';
 import { map } from 'rxjs/operators';
 
 import { HttpService } from '@nestjs/axios';
@@ -10,9 +11,10 @@ export class CompanyService {
   constructor(private httpService: HttpService) {}
 
   find() {
-    const data = this.httpService
-      .get<Company>('/company')
-      .pipe(map((res) => res.data));
+    const data = this.httpService.get<Company>('/company').pipe(
+      map((res) => res.data),
+      map((data) => camelcaseKeys(data, { deep: true })),
+    );
 
     return data;
   }

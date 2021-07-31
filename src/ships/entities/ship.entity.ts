@@ -12,7 +12,7 @@ export class Ship {
   active?: boolean;
 
   @Field(() => String, { nullable: true })
-  legacy_id?: string;
+  legacyId?: string;
 
   @Field(() => String, { nullable: true })
   model?: string;
@@ -35,26 +35,26 @@ export class Ship {
   @Field(() => Int, { nullable: true })
   class?: number;
 
-  @Field(() => Int, { nullable: true })
-  mass_kg?: number;
+  @Field(() => Float, { nullable: true })
+  massKg?: number;
+
+  @Field(() => Float, { nullable: true })
+  massLbs?: number;
 
   @Field(() => Int, { nullable: true })
-  mass_lbs?: number;
-
-  @Field(() => Int, { nullable: true })
-  year_built?: number;
+  yearBuilt?: number;
 
   @Field(() => String, { nullable: true })
-  home_port?: string;
+  homePort?: string;
 
   @Field(() => String, { nullable: true })
   status?: string;
 
   @Field(() => Int, { nullable: true })
-  speed_kn?: number;
+  speedKn?: number;
 
   @Field(() => Int, { nullable: true })
-  course_deg?: number;
+  courseDeg?: number;
 
   @Field(() => Float, { nullable: true })
   latitude?: number;
@@ -63,7 +63,7 @@ export class Ship {
   longitude?: number;
 
   @Field(() => String, { nullable: true })
-  last_ais_update?: string;
+  lastAisUpdate?: string;
 
   @Field(() => String, { nullable: true })
   link?: string;

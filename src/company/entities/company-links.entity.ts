@@ -12,5 +12,5 @@ export class CompanyLinks {
   twitter?: string;
 
   @Field(() => String, { nullable: true })
-  elon_twitter?: string;
+  elonTwitter?: string;
 }

@@ -5,14 +5,14 @@ import { RocketThrust } from './rocket-thrust.entity';
 
 @ObjectType()
 export class RocketSecondStage {
-  @Field(() => String)
-  id: string;
+  @Field(() => String, { nullable: true })
+  id?: string;
 
   @Field(() => Int, { nullable: true })
-  burn_time_sec?: number;
+  burnTimeSec?: number;
 
   @Field(() => Float, { nullable: true })
-  fuel_amount_tons?: number;
+  fuelAmountTons?: number;
 
   @Field(() => Int, { nullable: true })
   engines?: number;

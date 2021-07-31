@@ -32,50 +32,50 @@ export class Dragon {
   thrusters?: DragonThruster[];
 
   @Field(() => Int, { nullable: true })
-  dry_mass_lb?: number;
+  dryMassLb?: number;
 
   @Field(() => Int, { nullable: true })
-  dry_mass_kg?: number;
+  dryMassKg?: number;
 
   @Field(() => Int, { nullable: true })
-  orbit_duration_yr?: number;
+  orbitDurationYr?: number;
 
   @Field(() => Int, { nullable: true })
-  sidewall_angle_deg?: number;
+  sidewallAngleDeg?: number;
 
   @Field(() => Int, { nullable: true })
-  crew_capacity?: number;
+  crewCapacity?: number;
 
   @Field(() => [String], { nullable: true })
-  flickr_images?: string[];
+  flickrImages?: string[];
 
   @Field(() => String, { nullable: true })
-  first_flight?: string;
+  firstFlight?: string;
 
   @Field(() => DragonDiameter, { nullable: true })
   diameter?: DragonDiameter;
 
   @Field(() => DragonDiameter, { nullable: true })
-  height_w_trunk?: DragonDiameter;
+  heightWTrunk?: DragonDiameter;
 
   @Field(() => DragonTrunk, { nullable: true })
   trunk?: DragonTrunk;
 
   @Field(() => DragonPressurizedCapsule, { nullable: true })
-  pressurized_capsule?: DragonPressurizedCapsule;
+  pressurizedCapsule?: DragonPressurizedCapsule;
 
   @Field(() => DragonVolume, { nullable: true })
-  return_payload_vol?: DragonVolume;
+  returnPayloadVol?: DragonVolume;
 
   @Field(() => DragonMass, { nullable: true })
-  return_payload_mass?: DragonMass;
+  returnPayloadMass?: DragonMass;
 
   @Field(() => DragonVolume, { nullable: true })
-  launch_payload_vol?: DragonVolume;
+  launchPayloadVol?: DragonVolume;
 
   @Field(() => DragonMass, { nullable: true })
-  launch_payload_mass?: DragonMass;
+  launchPayloadMass?: DragonMass;
 
   @Field(() => DragonHeatShield, { nullable: true })
-  heat_shield?: DragonHeatShield;
+  heatShield?: DragonHeatShield;
 }
