@@ -1,8 +1,9 @@
-import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
-
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 
+import { NODE_ENV } from './_utils/constants/env-keys';
+import { validateEnvVars } from './_utils/env.validation';
 import { CapsulesModule } from './capsules/capsules.module';
 import { CompanyModule } from './company/company.module';
 import { CoresModule } from './cores/cores.module';
@@ -19,10 +20,17 @@ import { StarlinksModule } from './starlinks/starlinks.module';
 
 @Module({
   imports: [
-    GraphQLModule.forRoot({
-      debug: false,
-      autoSchemaFile: true,
-      plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
+    ConfigModule.forRoot({
+      cache: true,
+      validate: validateEnvVars,
+    }),
+    GraphQLModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: async (configService: ConfigService) => ({
+        debug: configService.get(NODE_ENV) === 'development',
+        autoSchemaFile: true,
+      }),
+      inject: [ConfigService],
     }),
     CapsulesModule,
     CompanyModule,

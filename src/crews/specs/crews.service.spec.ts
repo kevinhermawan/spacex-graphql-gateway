@@ -1,7 +1,6 @@
 import { HttpModule } from '@nestjs/axios';
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { HttpConfigService } from '../../_utils/http-config.service';
 import { CrewsService } from '../crews.service';
 
 describe('CrewsService', () => {
@@ -9,11 +8,7 @@ describe('CrewsService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [
-        HttpModule.registerAsync({
-          useClass: HttpConfigService,
-        }),
-      ],
+      imports: [HttpModule],
       providers: [CrewsService],
     }).compile();
 

@@ -1,14 +1,19 @@
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
-import { HttpConfigService } from '../_utils/http-config.service';
+import { SPACEX_API_URL } from '../_utils/constants/env-keys';
 import { RoadsterResolver } from './roadster.resolver';
 import { RoadsterService } from './roadster.service';
 
 @Module({
   imports: [
     HttpModule.registerAsync({
-      useClass: HttpConfigService,
+      imports: [ConfigModule],
+      useFactory: async (configService: ConfigService) => ({
+        baseURL: configService.get(SPACEX_API_URL),
+      }),
+      inject: [ConfigService],
     }),
   ],
   providers: [RoadsterResolver, RoadsterService],
