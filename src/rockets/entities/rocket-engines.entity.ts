@@ -1,4 +1,4 @@
-import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Field, Float, Int, ObjectType } from '@nestjs/graphql';
 
 import { RocketISP } from './rocket-isp.entity';
 import { RocketThrust } from './rocket-thrust.entity';
@@ -17,23 +17,23 @@ export class RocketEngines {
   @Field(() => String, { nullable: true })
   version?: string;
 
-  @Field(() => Int, { nullable: true })
-  thrust_to_weight?: number;
+  @Field(() => Float, { nullable: true })
+  thrustToWeight?: number;
 
   @Field(() => Int, { nullable: true })
-  engine_loss_max?: number;
+  engineLossMax?: number;
 
   @Field(() => String, { nullable: true })
-  propellant_1?: string;
+  propellant1?: string;
 
   @Field(() => String, { nullable: true })
-  propellant_2?: string;
+  propellant2?: string;
 
   @Field(() => RocketThrust, { nullable: true })
-  thrust_sea_level?: RocketThrust;
+  thrustSeaLevel?: RocketThrust;
 
   @Field(() => RocketThrust, { nullable: true })
-  thrust_vacuum?: RocketThrust;
+  thrustVacuum?: RocketThrust;
 
   @Field(() => RocketISP, { nullable: true })
   isp?: RocketISP;

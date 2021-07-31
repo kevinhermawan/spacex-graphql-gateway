@@ -11,27 +11,27 @@ export class Core {
   @Field(() => String, { nullable: true })
   serial?: string;
 
+  @Field(() => Int, { nullable: true })
+  block?: number;
+
   @Field(() => [String], { nullable: true })
   launches?: string[];
 
   @Field(() => String, { nullable: true })
-  last_update?: string;
+  lastUpdate?: string;
 
   @Field(() => Int, { nullable: true })
-  asds_landings?: number;
+  asdsLandings?: number;
 
   @Field(() => Int, { nullable: true })
-  asds_attempts?: number;
+  asdsAttempts?: number;
 
   @Field(() => Int, { nullable: true })
-  rtls_landings?: number;
+  rtlsLandings?: number;
 
   @Field(() => Int, { nullable: true })
-  rtls_attempts?: number;
+  rtlsAttempts?: number;
 
   @Field(() => Int, { nullable: true })
-  reuse_count?: number;
-
-  @Field(() => Int, { nullable: true })
-  block?: number;
+  reuseCount?: number;
 }

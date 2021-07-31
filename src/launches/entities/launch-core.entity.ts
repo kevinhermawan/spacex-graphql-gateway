@@ -2,8 +2,8 @@ import { ObjectType, Field, Int } from '@nestjs/graphql';
 
 @ObjectType()
 export class LaunchCore {
-  @Field(() => String)
-  id: string;
+  @Field(() => String, { nullable: true })
+  id?: string;
 
   @Field(() => String, { nullable: true })
   core?: string;
@@ -24,11 +24,11 @@ export class LaunchCore {
   landpad?: string;
 
   @Field(() => Boolean, { nullable: true })
-  landing_attempt?: boolean;
+  landingAttempt?: boolean;
 
   @Field(() => Boolean, { nullable: true })
-  landing_success?: boolean;
+  landingSuccess?: boolean;
 
   @Field(() => String, { nullable: true })
-  landing_type?: string;
+  landingType?: string;
 }

@@ -22,7 +22,7 @@ export class LaunchLinks {
   webcast?: string;
 
   @Field(() => String, { nullable: true })
-  youtube_id?: string;
+  youtubeId?: string;
 
   @Field(() => String, { nullable: true })
   article?: string;

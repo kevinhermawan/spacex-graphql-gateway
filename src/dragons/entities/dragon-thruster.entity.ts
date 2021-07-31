@@ -17,10 +17,10 @@ export class DragonThruster {
   isp?: number;
 
   @Field(() => String, { nullable: true })
-  fuel_1?: string;
+  fuel1?: string;
 
   @Field(() => String, { nullable: true })
-  fuel_2?: string;
+  fuel2?: string;
 
   @Field(() => DragonThrust, { nullable: true })
   thrust?: DragonThrust;

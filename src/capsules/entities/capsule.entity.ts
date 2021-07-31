@@ -18,14 +18,14 @@ export class Capsule {
   launches?: string[];
 
   @Field(() => String, { nullable: true })
-  last_update: string;
+  lastUpdate?: string;
 
   @Field(() => Int, { nullable: true })
-  land_landings?: number;
+  landLandings?: number;
 
   @Field(() => Int, { nullable: true })
-  water_landings?: number;
+  waterLandings?: number;
 
   @Field(() => Int, { nullable: true })
-  reuse_count?: number;
+  reuseCount?: number;
 }

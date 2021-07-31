@@ -20,10 +20,10 @@ export class Starlink {
   latitude?: number;
 
   @Field(() => Float, { nullable: true })
-  height_km?: number;
+  heightKm?: number;
 
   @Field(() => Float, { nullable: true })
-  velocity_kms?: number;
+  velocityKms?: number;
 
   @Field(() => StarlinkSpaceTrack, { nullable: true })
   spaceTrack?: StarlinkSpaceTrack;

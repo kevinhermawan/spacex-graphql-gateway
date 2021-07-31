@@ -22,56 +22,56 @@ export class Payload {
   @Field(() => Boolean, { nullable: true })
   reused?: boolean;
 
-  @Field(() => Int, { nullable: true })
-  mass_kg?: number;
+  @Field(() => Float, { nullable: true })
+  massKg?: number;
 
-  @Field(() => Int, { nullable: true })
-  mass_lbs?: number;
+  @Field(() => Float, { nullable: true })
+  massLbs?: number;
 
   @Field(() => String, { nullable: true })
   regime?: string;
 
   @Field(() => String, { nullable: true })
-  reference_system?: string;
+  referenceSystem?: string;
 
   @Field(() => Float, { nullable: true })
   longitude?: number;
 
   @Field(() => Float, { nullable: true })
-  semi_major_axis_km?: number;
+  semiMajorAxisKm?: number;
 
   @Field(() => Float, { nullable: true })
   eccentricity?: number;
 
   @Field(() => Float, { nullable: true })
-  periapsis_km?: number;
+  periapsisKm?: number;
 
   @Field(() => Float, { nullable: true })
-  apoapsis_km?: number;
+  apoapsisKm?: number;
 
   @Field(() => Float, { nullable: true })
-  inclination_deg?: number;
+  inclinationDeg?: number;
 
   @Field(() => Float, { nullable: true })
-  period_min?: number;
+  periodMin?: number;
 
   @Field(() => String, { nullable: true })
-  lifespan_years?: string;
+  lifespanYears?: string;
 
   @Field(() => String, { nullable: true })
   epoch?: string;
 
   @Field(() => Float, { nullable: true })
-  mean_motion?: number;
+  meanMotion?: number;
 
   @Field(() => Float, { nullable: true })
   raan?: number;
 
   @Field(() => Float, { nullable: true })
-  arg_of_pericenter?: number;
+  argOfPericenter?: number;
 
   @Field(() => Float, { nullable: true })
-  mean_anomaly?: number;
+  meanAnomaly?: number;
 
   @Field(() => [String], { nullable: true })
   manufacturers?: string[];
@@ -80,7 +80,7 @@ export class Payload {
   nationalities?: string[];
 
   @Field(() => [Int], { nullable: true })
-  norad_ids?: number[];
+  noradIds?: number[];
 
   @Field(() => [String], { nullable: true })
   customers?: string[];

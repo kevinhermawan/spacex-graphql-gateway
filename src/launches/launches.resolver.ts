@@ -12,7 +12,7 @@ export class LaunchesResolver {
     return this.launchesService.findAll();
   }
 
-  @Query(() => [Launch], { name: 'launchPast' })
+  @Query(() => [Launch], { name: 'launchesPast' })
   findAllPast() {
     return this.launchesService.findAllPast();
   }

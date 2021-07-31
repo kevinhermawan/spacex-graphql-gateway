@@ -4,8 +4,8 @@ import { RocketThrust } from './rocket-thrust.entity';
 
 @ObjectType()
 export class RocketFirstStage {
-  @Field(() => String)
-  id: string;
+  @Field(() => String, { nullable: true })
+  id?: string;
 
   @Field(() => String, { nullable: true })
   name?: string;
@@ -14,10 +14,10 @@ export class RocketFirstStage {
   type?: string;
 
   @Field(() => Int, { nullable: true })
-  burn_time_sec?: number;
+  burnTimeSec?: number;
 
   @Field(() => Float, { nullable: true })
-  fuel_amount_tons?: number;
+  fuelAmountTons?: number;
 
   @Field(() => Int, { nullable: true })
   engines?: number;
@@ -26,8 +26,8 @@ export class RocketFirstStage {
   reusable?: boolean;
 
   @Field(() => RocketThrust, { nullable: true })
-  thrust_vacuum?: RocketThrust;
+  thrustVacuum?: RocketThrust;
 
   @Field(() => RocketThrust, { nullable: true })
-  thrust_sea_level?: RocketThrust;
+  thrustSeaLevel?: RocketThrust;
 }

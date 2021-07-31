@@ -9,6 +9,9 @@ export class Crew {
   name?: string;
 
   @Field(() => String, { nullable: true })
+  status?: string;
+
+  @Field(() => String, { nullable: true })
   agency?: string;
 
   @Field(() => String, { nullable: true })
@@ -19,7 +22,4 @@ export class Crew {
 
   @Field(() => [String], { nullable: true })
   launches?: string[];
-
-  @Field(() => String, { nullable: true })
-  status?: string;
 }

@@ -45,7 +45,6 @@ import { StarlinksModule } from './starlinks/starlinks.module';
     RocketsModule,
     ShipsModule,
     StarlinksModule,
-    RoadsterModule,
   ],
 })
 export class AppModule {}

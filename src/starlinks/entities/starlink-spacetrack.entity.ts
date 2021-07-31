@@ -9,10 +9,10 @@ export class StarlinkSpaceTrack {
   latitude?: number;
 
   @Field(() => Float, { nullable: true })
-  height_km?: number;
+  heightKm?: number;
 
   @Field(() => Float, { nullable: true })
-  velocity_kms?: number;
+  velocityKms?: number;
 
   @Field(() => String, { nullable: true })
   CCSDS_OMM_VERS?: string;

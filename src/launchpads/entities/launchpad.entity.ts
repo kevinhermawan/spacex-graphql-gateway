@@ -11,7 +11,7 @@ export class Launchpad {
   name?: string;
 
   @Field(() => String, { nullable: true })
-  full_name?: string;
+  fullName?: string;
 
   @Field(() => String, { nullable: true })
   details?: string;
@@ -32,10 +32,10 @@ export class Launchpad {
   longitude?: number;
 
   @Field(() => Int, { nullable: true })
-  landing_attempts?: number;
+  landingAttempts?: number;
 
   @Field(() => Int, { nullable: true })
-  landing_successes?: number;
+  landingSuccesses?: number;
 
   @Field(() => String, { nullable: true })
   wikipedia?: string;

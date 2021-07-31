@@ -6,11 +6,11 @@ export class DragonHeatShield {
   material?: string;
 
   @Field(() => Float, { nullable: true })
-  size_meters?: number;
+  sizeMeters?: number;
 
   @Field(() => Int, { nullable: true })
-  temp_degrees?: number;
+  tempDegrees?: number;
 
   @Field(() => String, { nullable: true })
-  dev_partner?: string;
+  devPartner?: string;
 }

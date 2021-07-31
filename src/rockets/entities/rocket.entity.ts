@@ -32,13 +32,13 @@ export class Rocket {
   country?: string;
 
   @Field(() => String, { nullable: true })
-  first_flight?: string;
+  firstFlight?: string;
 
   @Field(() => Int, { nullable: true })
-  cost_per_launch?: number;
+  costPerLaunch?: number;
 
   @Field(() => Int, { nullable: true })
-  success_rate_pct?: number;
+  successRatePct?: number;
 
   @Field(() => Boolean, { nullable: true })
   active?: boolean;
@@ -50,13 +50,13 @@ export class Rocket {
   boosters?: number;
 
   @Field(() => [String], { nullable: true })
-  flickr_images?: string[];
+  flickrImages?: string[];
 
   @Field(() => RocketFirstStage, { nullable: true })
-  first_stage?: RocketFirstStage;
+  firstStage?: RocketFirstStage;
 
   @Field(() => RocketSecondStage, { nullable: true })
-  second_stage?: RocketSecondStage;
+  secondStage?: RocketSecondStage;
 
   @Field(() => RocketDiameter, { nullable: true })
   height?: RocketDiameter;
@@ -71,8 +71,8 @@ export class Rocket {
   engines?: RocketEngines;
 
   @Field(() => RocketLandingLegs, { nullable: true })
-  landing_legs?: RocketLandingLegs;
+  landingLegs?: RocketLandingLegs;
 
   @Field(() => RocketPayloadWeight, { nullable: true })
-  payload_weights?: RocketPayloadWeight[];
+  payloadWeights?: RocketPayloadWeight[];
 }
